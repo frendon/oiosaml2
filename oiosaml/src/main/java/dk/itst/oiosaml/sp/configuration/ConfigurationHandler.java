@@ -50,8 +50,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import dk.itst.oiosaml.configuration.FileConfiguration;
 import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
-import dk.itst.oiosaml.logging.Logger;
-import dk.itst.oiosaml.logging.LoggerFactory;
+import org.slf4j.Logger;;
+import org.slf4j.LoggerFactory;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.FileUploadException;

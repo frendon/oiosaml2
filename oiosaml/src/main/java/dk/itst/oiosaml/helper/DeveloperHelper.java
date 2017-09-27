@@ -3,8 +3,8 @@ package dk.itst.oiosaml.helper;
 import java.util.ArrayList;
 import java.util.List;
 
-import dk.itst.oiosaml.logging.Logger;
-import dk.itst.oiosaml.logging.LoggerFactory;
+import org.slf4j.Logger;;
+import org.slf4j.LoggerFactory;
 
 public class DeveloperHelper {
 	private static final Logger log = LoggerFactory.getLogger(DeveloperHelper.class);

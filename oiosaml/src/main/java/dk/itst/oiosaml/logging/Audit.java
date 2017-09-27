@@ -24,12 +24,13 @@
  */
 package dk.itst.oiosaml.logging;
 
-import java.text.MessageFormat;
-
-import javax.servlet.http.HttpServletRequest;
-
 import dk.itst.oiosaml.sp.UserAssertion;
 import dk.itst.oiosaml.sp.service.util.Constants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletRequest;
+import java.text.MessageFormat;
 
 public class Audit {
 	private static Logger log = (Logger) LoggerFactory.getLogger("OIOSAML_AUDIT_LOGGER");
