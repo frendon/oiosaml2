@@ -6,10 +6,10 @@ This is a fork from oiosaml2 for Java.
 The principal reason to make this fork is change the loggin systen for slf4j.
 
 
-[Home Page of Fork](https://digitaliser.dk/group/42063/resources)
+[Home Page of oiosaml2](https://digitaliser.dk/group/42063/resources)
 
 
-[Fork from subversion](https://svn.softwareborsen.dk/oiosaml.java/oiosaml2/)
+[Fork from subversion Revision 34534](https://svn.softwareborsen.dk/oiosaml.java/oiosaml2/)
 
 
 
