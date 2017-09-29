@@ -31,8 +31,8 @@ This project is build with maven:
 
 **Useful command line options**
 
-**-DskipTests=true** compiles the tests, but skips running them
-**-Dmaven.test.skip=true** skips compiling the tests and does not run them
+* **-DskipTests=true** compiles the tests, but skips running them
+* **-Dmaven.test.skip=true** skips compiling the tests and does not run them
 
 
 ```sh
