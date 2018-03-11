@@ -38,10 +38,10 @@ import java.util.Date;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.opensaml.saml2.core.Assertion;
 import org.opensaml.xml.util.Base64;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.sp.model.OIOAssertion;
@@ -49,6 +49,8 @@ import dk.itst.oiosaml.sp.service.session.Request;
 import dk.itst.oiosaml.sp.service.session.SessionHandler;
 import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
+
 
 public class JdbcSessionHandler implements SessionHandler {
 	private static final Logger log = LoggerFactory.getLogger(JdbcSessionHandler.class);

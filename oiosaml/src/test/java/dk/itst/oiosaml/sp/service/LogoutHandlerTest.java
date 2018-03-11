@@ -11,9 +11,9 @@ import org.junit.Test;
 import org.opensaml.saml2.core.LogoutRequest;
 import org.w3c.dom.Document;
 
-import dk.itst.oiosaml.sp.service.LogoutHandler;
 import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
 
 public class LogoutHandlerTest extends AbstractServiceTests {
 

@@ -28,9 +28,10 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
 
-import dk.itst.oiosaml.logging.Audit;
-import org.slf4j.Logger;;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import dk.itst.oiosaml.logging.Audit;
 import dk.itst.oiosaml.logging.Operation;
 import dk.itst.oiosaml.sp.AuthenticationHandler;
 import dk.itst.oiosaml.sp.LogoutAuthenticationHandler;
@@ -39,6 +40,7 @@ import dk.itst.oiosaml.sp.model.OIOAssertion;
 import dk.itst.oiosaml.sp.model.OIOLogoutRequest;
 import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
 
 public class LogoutHandler implements SAMLHandler{
 

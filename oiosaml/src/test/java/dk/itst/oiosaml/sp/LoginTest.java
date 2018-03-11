@@ -27,14 +27,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Test;
-import org.opensaml.common.xml.SAMLConstants;
-import org.opensaml.saml2.core.StatusCode;
-
 import com.gargoylesoftware.htmlunit.Page;
 import com.gargoylesoftware.htmlunit.WebAssert;
 import com.gargoylesoftware.htmlunit.WebRequestSettings;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import org.junit.Test;
+import org.opensaml.common.xml.SAMLConstants;
+import org.opensaml.saml2.core.StatusCode;
 
 public class LoginTest extends IntegrationTests {
 

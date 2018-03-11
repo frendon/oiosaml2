@@ -27,16 +27,17 @@ import java.security.cert.Certificate;
 import java.util.Collection;
 import java.util.Collections;
 
-import dk.itst.oiosaml.helper.DeveloperHelper;
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.opensaml.saml2.core.Issuer;
 import org.opensaml.saml2.core.Response;
 import org.opensaml.saml2.core.StatusCode;
 import org.opensaml.xml.security.credential.Credential;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import dk.itst.oiosaml.helper.DeveloperHelper;
 import dk.itst.oiosaml.sp.model.validation.ValidationException;
 import dk.itst.oiosaml.sp.service.session.SessionHandler;
+
 
 /**
  * Base class for all SAML responses.

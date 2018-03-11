@@ -39,12 +39,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.configuration.Configuration;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.opensaml.xml.security.credential.Credential;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
 import dk.itst.oiosaml.error.WrappedException;
@@ -59,6 +59,9 @@ import dk.itst.oiosaml.sp.service.session.SessionHandler;
 import dk.itst.oiosaml.sp.service.session.SessionHandlerFactory;
 import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
+
+
 
 /**
  * Main servlet for all SAML handling.
@@ -88,6 +91,15 @@ public class DispatcherServlet extends HttpServlet {
 
 	private SessionHandlerFactory sessionHandlerFactory;
 	private ServletContext servletContext;
+
+	/**
+	 * Static initializer for bootstrapping OpenSAML.
+	 * 
+	 * ... we need this in both SPFilter and DispatcherServlet as the order of creation of these two depends on the servlet container
+	 */
+	static {
+		OIOSAMLBootstrap.init();
+	}
 
 	@Override
 	public final void init(ServletConfig config) throws ServletException {

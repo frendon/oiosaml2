@@ -23,12 +23,13 @@
  */
 package dk.itst.oiosaml.sp.service.session;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.configuration.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
 
 /**
  * Factory for creating new session handlers.

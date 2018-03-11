@@ -48,10 +48,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dk.itst.oiosaml.configuration.FileConfiguration;
-import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.FileUploadException;
@@ -75,15 +71,21 @@ import org.opensaml.xml.security.credential.Credential;
 import org.opensaml.xml.security.credential.UsageType;
 import org.opensaml.xml.security.keyinfo.KeyInfoGenerator;
 import org.opensaml.xml.security.x509.BasicX509Credential;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.OIOSAMLConstants;
 import dk.itst.oiosaml.common.SAMLUtil;
+import dk.itst.oiosaml.configuration.FileConfiguration;
+import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
 import dk.itst.oiosaml.error.Layer;
 import dk.itst.oiosaml.error.WrappedException;
 import dk.itst.oiosaml.security.CredentialRepository;
 import dk.itst.oiosaml.sp.service.RequestContext;
 import dk.itst.oiosaml.sp.service.SAMLHandler;
 import dk.itst.oiosaml.sp.service.util.Constants;
+
+
 
 /**
  * Configuration hander for initial OIOSAML-J configuration.

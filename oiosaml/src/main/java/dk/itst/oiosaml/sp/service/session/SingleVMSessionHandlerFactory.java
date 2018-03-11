@@ -23,9 +23,9 @@
  */
 package dk.itst.oiosaml.sp.service.session;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.configuration.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SingleVMSessionHandlerFactory implements SessionHandlerFactory {
 	private static final Logger log = LoggerFactory.getLogger(SingleVMSessionHandlerFactory.class);

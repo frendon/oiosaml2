@@ -32,8 +32,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.io.IOUtils;
 import org.opensaml.saml2.core.LogoutRequest;
 import org.opensaml.saml2.core.StatusCode;
@@ -41,6 +39,8 @@ import org.opensaml.ws.soap.soap11.Body;
 import org.opensaml.ws.soap.soap11.Envelope;
 import org.opensaml.xml.XMLObject;
 import org.opensaml.xml.security.credential.Credential;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.error.Layer;
@@ -52,6 +52,8 @@ import dk.itst.oiosaml.sp.model.OIOAssertion;
 import dk.itst.oiosaml.sp.model.OIOLogoutRequest;
 import dk.itst.oiosaml.sp.model.OIOLogoutResponse;
 import dk.itst.oiosaml.sp.util.LogoutRequestValidationException;
+
+
 
 /**
  * Servlet for receiving a &lt;LogoutRequest&gt; sent from the Login Site by SOAP.

@@ -36,16 +36,18 @@ import java.util.UUID;
 
 import javax.servlet.ServletContext;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.configuration.Configuration;
 import org.opensaml.ws.soap.util.SOAPConstants;
 import org.opensaml.xml.util.Base64;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.OIOSAMLConstants;
 import dk.itst.oiosaml.error.Layer;
 import dk.itst.oiosaml.error.WrappedException;
 import dk.itst.oiosaml.sp.service.SAMLHandler;
+
+
 
 /**
  * Utility class used for signing SAML documents and verifying the signed

@@ -7,7 +7,6 @@ import org.opensaml.common.xml.SAMLConstants;
 
 import dk.itst.oiosaml.sp.model.OIOAuthnRequest;
 import dk.itst.oiosaml.sp.service.AbstractServiceTests;
-
 public class ArtifactBindingHandlerTest extends AbstractServiceTests {
 
 	private ArtifactBindingHandler artifactBindingHandler;

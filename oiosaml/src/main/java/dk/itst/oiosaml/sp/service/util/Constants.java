@@ -30,6 +30,7 @@ import org.opensaml.xml.signature.Signature;
 import dk.itst.oiosaml.sp.UserAssertion;
 import dk.itst.oiosaml.sp.service.session.SessionHandler;
 
+
 /**
  * Basic constants used within the library.
  * 

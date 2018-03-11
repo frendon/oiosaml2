@@ -23,11 +23,17 @@
  */
 package dk.itst.oiosaml.sp.model;
 
-import dk.itst.oiosaml.common.SAMLUtil;
-import dk.itst.oiosaml.error.Layer;
-import dk.itst.oiosaml.error.WrappedException;
-import dk.itst.oiosaml.sp.service.util.Constants;
-import dk.itst.oiosaml.sp.service.util.Utils;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.security.PublicKey;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.zip.Deflater;
+import java.util.zip.DeflaterOutputStream;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.opensaml.common.SAMLObject;
@@ -52,17 +58,13 @@ import org.opensaml.xml.validation.ValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletRequest;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.security.PublicKey;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.zip.Deflater;
-import java.util.zip.DeflaterOutputStream;
+import dk.itst.oiosaml.common.SAMLUtil;
+import dk.itst.oiosaml.error.Layer;
+import dk.itst.oiosaml.error.WrappedException;
+import dk.itst.oiosaml.sp.service.util.Constants;
+import dk.itst.oiosaml.sp.service.util.Utils;
 
-;
+
 
 public class OIOLogoutResponse extends OIOAbstractResponse {
 	private static final Logger log = LoggerFactory.getLogger(OIOLogoutResponse.class);

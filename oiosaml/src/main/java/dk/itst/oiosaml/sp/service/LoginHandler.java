@@ -34,12 +34,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.configuration.Configuration;
 import org.apache.velocity.VelocityContext;
 import org.opensaml.saml2.metadata.Endpoint;
 import org.opensaml.xml.util.Base64;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.logging.Audit;
@@ -52,6 +52,8 @@ import dk.itst.oiosaml.sp.metadata.IdpMetadata.Metadata;
 import dk.itst.oiosaml.sp.model.OIOAuthnRequest;
 import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.HTTPUtils;
+
+
 
 public class LoginHandler implements SAMLHandler {
 	private static final Logger log = LoggerFactory.getLogger(LoginHandler.class);

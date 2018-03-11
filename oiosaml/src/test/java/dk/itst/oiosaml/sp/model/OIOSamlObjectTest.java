@@ -19,8 +19,8 @@ import org.w3c.dom.Element;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.sp.AbstractTests;
-import dk.itst.oiosaml.sp.model.OIOSamlObject;
 import dk.itst.oiosaml.sp.service.TestHelper;
+
 
 public class OIOSamlObjectTest extends AbstractTests{
 

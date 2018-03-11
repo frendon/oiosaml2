@@ -28,10 +28,10 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.commons.configuration.Configuration;
 import org.opensaml.saml2.core.Assertion;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.logging.Audit;
@@ -52,6 +52,8 @@ import dk.itst.oiosaml.sp.service.util.HttpSOAPClient;
 import dk.itst.oiosaml.sp.service.util.PostResponseExtractor;
 import dk.itst.oiosaml.sp.service.util.SOAPClient;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
+
 
 /**
  * Servlet for receiving SAML asertions from the IdP.

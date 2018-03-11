@@ -36,6 +36,7 @@ import org.opensaml.xml.XMLObject;
 
 import dk.itst.oiosaml.error.WrappedException;
 
+
 /**
  * Interface defining a configuration.
  * 

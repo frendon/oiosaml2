@@ -15,8 +15,8 @@ import org.w3c.dom.Element;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.sp.AbstractTests;
-import dk.itst.oiosaml.sp.model.OIOAuthnRequest;
 import dk.itst.oiosaml.sp.service.TestHelper;
+
 
 public class OIORequestTest extends AbstractTests{
 	private OIOAuthnRequest request;

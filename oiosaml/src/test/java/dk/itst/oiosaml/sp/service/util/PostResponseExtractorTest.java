@@ -15,7 +15,7 @@ import org.opensaml.xml.util.XMLHelper;
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.sp.model.OIOResponse;
 import dk.itst.oiosaml.sp.service.AbstractServiceTests;
-import dk.itst.oiosaml.sp.service.util.PostResponseExtractor;
+
 
 public class PostResponseExtractorTest extends AbstractServiceTests {
 	

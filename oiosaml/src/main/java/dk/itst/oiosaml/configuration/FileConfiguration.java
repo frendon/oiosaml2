@@ -25,22 +25,6 @@
  */
 package dk.itst.oiosaml.configuration;
 
-import dk.itst.oiosaml.common.SAMLUtil;
-import dk.itst.oiosaml.error.Layer;
-import dk.itst.oiosaml.error.WrappedException;
-import dk.itst.oiosaml.helper.DeveloperHelper;
-import dk.itst.oiosaml.sp.service.SPFilter;
-import dk.itst.oiosaml.sp.service.util.Constants;
-import org.apache.commons.configuration.CompositeConfiguration;
-import org.apache.commons.configuration.Configuration;
-import org.apache.commons.configuration.ConfigurationException;
-import org.apache.commons.configuration.PropertiesConfiguration;
-import org.opensaml.saml2.metadata.EntitiesDescriptor;
-import org.opensaml.saml2.metadata.EntityDescriptor;
-import org.opensaml.xml.XMLObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -59,7 +43,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-;
+import org.apache.commons.configuration.CompositeConfiguration;
+import org.apache.commons.configuration.Configuration;
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
+import org.opensaml.saml2.metadata.EntitiesDescriptor;
+import org.opensaml.saml2.metadata.EntityDescriptor;
+import org.opensaml.xml.XMLObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import dk.itst.oiosaml.common.SAMLUtil;
+import dk.itst.oiosaml.error.Layer;
+import dk.itst.oiosaml.error.WrappedException;
+import dk.itst.oiosaml.helper.DeveloperHelper;
+import dk.itst.oiosaml.sp.service.SPFilter;
+import dk.itst.oiosaml.sp.service.util.Constants;
+
 
 /**
  * Utility class to obtain a handle to all property values within the current

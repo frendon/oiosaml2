@@ -32,6 +32,7 @@ import org.apache.commons.configuration.Configuration;
 import dk.itst.oiosaml.sp.service.session.SessionHandler;
 import dk.itst.oiosaml.sp.service.session.SessionHandlerFactory;
 
+
 /**
  * Factory for creating {@link JdbcSessionHandler} objects.
  * 

@@ -31,6 +31,7 @@ import org.opensaml.xml.XMLObject;
 import dk.itst.oiosaml.common.SOAPException;
 import dk.itst.oiosaml.sp.model.OIOSamlObject;
 
+
 public interface SOAPClient {
 	public Envelope wsCall(XMLObject obj, String location, String username, String password, boolean ignoreCertPath) throws IOException;
 	public XMLObject wsCall(OIOSamlObject obj, String location, String username, String password, boolean ignoreCertPath) throws IOException;

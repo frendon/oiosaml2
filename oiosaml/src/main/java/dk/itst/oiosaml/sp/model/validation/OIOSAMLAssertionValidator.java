@@ -23,17 +23,18 @@
  */
 package dk.itst.oiosaml.sp.model.validation;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.joda.time.DateTime;
 import org.opensaml.saml2.core.Assertion;
 import org.opensaml.saml2.core.AuthnContext;
 import org.opensaml.saml2.core.AuthnContextClassRef;
 import org.opensaml.saml2.core.AuthnStatement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.OIOSAMLConstants;
 import dk.itst.oiosaml.sp.model.AssuranceLevel;
 import dk.itst.oiosaml.sp.model.OIOAssertion;
+
 
 public class OIOSAMLAssertionValidator extends BasicAssertionValidator {
 	private static final Logger log = LoggerFactory.getLogger(OIOSAMLAssertionValidator.class);

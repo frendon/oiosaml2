@@ -1,7 +1,7 @@
 package dk.itst.oiosaml.sp.service;
 
+import static dk.itst.oiosaml.sp.service.TestHelper.buildConfiguration;
 import static org.junit.Assert.fail;
-import static dk.itst.oiosaml.sp.service.TestHelper.*;
 
 import java.util.HashMap;
 
@@ -16,7 +16,6 @@ import org.opensaml.xml.util.Base64;
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.sp.UserAssertion;
 import dk.itst.oiosaml.sp.model.validation.OIOSAMLAssertionValidator;
-import dk.itst.oiosaml.sp.service.SAMLAssertionConsumerHandler;
 import dk.itst.oiosaml.sp.service.session.Request;
 import dk.itst.oiosaml.sp.service.util.Constants;
 

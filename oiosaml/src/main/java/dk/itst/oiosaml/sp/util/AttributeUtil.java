@@ -44,6 +44,8 @@ import org.opensaml.xml.util.XMLHelper;
 import dk.itst.oiosaml.common.OIOSAMLConstants;
 import dk.itst.oiosaml.common.SAMLUtil;
 
+
+
 /**
  * Utility methods related to extract the content of a SAML Attribute
  * 

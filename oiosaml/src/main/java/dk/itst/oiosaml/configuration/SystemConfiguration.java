@@ -22,11 +22,11 @@
  */
 package dk.itst.oiosaml.configuration;
 
-import dk.itst.oiosaml.sp.service.util.Constants;
-
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
+
+import dk.itst.oiosaml.sp.service.util.Constants;
 
 /**
  * Utility class to obtain configuration settings from web.xml file

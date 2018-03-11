@@ -28,7 +28,6 @@ import org.xml.sax.SAXException;
 
 import dk.itst.oiosaml.error.WrappedException;
 import dk.itst.oiosaml.sp.model.OIOLogoutRequest;
-import dk.itst.oiosaml.sp.service.LogoutServiceHTTPRedirectHandler;
 import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.Utils;
 

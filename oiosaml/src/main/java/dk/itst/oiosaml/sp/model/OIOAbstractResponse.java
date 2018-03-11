@@ -29,6 +29,7 @@ import org.opensaml.saml2.core.StatusResponseType;
 import dk.itst.oiosaml.helper.DeveloperHelper;
 import dk.itst.oiosaml.sp.model.validation.ValidationException;
 
+
 public class OIOAbstractResponse extends OIOSamlObject {
 
 	private final StatusResponseType response;

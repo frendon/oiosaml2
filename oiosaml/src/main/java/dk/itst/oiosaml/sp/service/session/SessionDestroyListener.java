@@ -26,9 +26,10 @@ package dk.itst.oiosaml.sp.service.session;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-import dk.itst.oiosaml.logging.Audit;
-import org.slf4j.Logger;;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import dk.itst.oiosaml.logging.Audit;
 import dk.itst.oiosaml.logging.Operation;
 import dk.itst.oiosaml.sp.model.OIOAssertion;
 

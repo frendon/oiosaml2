@@ -22,8 +22,6 @@
  */
 package dk.itst.oiosaml.sp.model;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.opensaml.saml2.core.Assertion;
 import org.opensaml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml2.encryption.Decrypter;
@@ -35,10 +33,13 @@ import org.opensaml.xml.encryption.SimpleRetrievalMethodEncryptedKeyResolver;
 import org.opensaml.xml.security.credential.Credential;
 import org.opensaml.xml.security.keyinfo.KeyInfoCredentialResolver;
 import org.opensaml.xml.security.keyinfo.StaticKeyInfoCredentialResolver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.helper.DeveloperHelper;
 import dk.itst.oiosaml.sp.model.validation.ValidationException;
+
 
 public class OIOEncryptedAssertion {
 	private static final Logger log = LoggerFactory.getLogger(OIOEncryptedAssertion.class);

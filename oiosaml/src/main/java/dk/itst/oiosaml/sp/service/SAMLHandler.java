@@ -27,6 +27,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 
+
 public interface SAMLHandler {
 	public void handleGet(RequestContext context) throws ServletException, IOException;
 	public void handlePost(RequestContext context) throws ServletException, IOException;

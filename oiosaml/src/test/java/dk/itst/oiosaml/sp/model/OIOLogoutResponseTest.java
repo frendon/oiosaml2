@@ -3,7 +3,9 @@ package dk.itst.oiosaml.sp.model;
 import static dk.itst.oiosaml.sp.service.TestHelper.getCredential;
 import static dk.itst.oiosaml.sp.service.TestHelper.parseBase64Encoded;
 import static dk.itst.oiosaml.sp.service.TestHelper.validateUrlSignature;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.net.URI;
 import java.util.List;
@@ -19,8 +21,6 @@ import org.opensaml.xml.security.credential.Credential;
 import org.w3c.dom.Document;
 
 import dk.itst.oiosaml.common.SAMLUtil;
-import dk.itst.oiosaml.sp.model.OIOLogoutRequest;
-import dk.itst.oiosaml.sp.model.OIOLogoutResponse;
 import dk.itst.oiosaml.sp.service.AbstractServiceTests;
 import dk.itst.oiosaml.sp.service.util.Utils;
 

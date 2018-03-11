@@ -23,11 +23,11 @@
  */
 package dk.itst.oiosaml.sp.service.session;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
-
 import java.util.Timer;
 import java.util.TimerTask;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SessionCleaner {
 	private static final Logger log = LoggerFactory.getLogger(SessionCleaner.class);

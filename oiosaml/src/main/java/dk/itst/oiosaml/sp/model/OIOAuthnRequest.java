@@ -23,8 +23,6 @@
  */
 package dk.itst.oiosaml.sp.model;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.opensaml.saml2.core.AuthnRequest;
@@ -32,6 +30,8 @@ import org.opensaml.saml2.core.NameIDPolicy;
 import org.opensaml.ws.message.encoder.MessageEncodingException;
 import org.opensaml.xml.security.credential.Credential;
 import org.opensaml.xml.validation.ValidationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.error.Layer;
@@ -39,6 +39,7 @@ import dk.itst.oiosaml.error.WrappedException;
 import dk.itst.oiosaml.sp.NameIDFormat;
 import dk.itst.oiosaml.sp.service.session.SessionHandler;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
 
 public class OIOAuthnRequest extends OIORequest {
 	private static final Logger log = LoggerFactory.getLogger(OIOAuthnRequest.class);

@@ -33,11 +33,14 @@ import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import dk.itst.oiosaml.common.SAMLUtil;
 import org.junit.Before;
 import org.junit.Test;
 
+import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.sp.service.util.Constants;
+
+
+
 
 public class SAMLConfigurationTest {
 

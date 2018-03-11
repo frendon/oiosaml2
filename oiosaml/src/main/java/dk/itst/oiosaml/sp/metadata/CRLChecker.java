@@ -25,38 +25,6 @@
  */
 package dk.itst.oiosaml.sp.metadata;
 
-import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
-import dk.itst.oiosaml.error.Layer;
-import dk.itst.oiosaml.error.WrappedException;
-import dk.itst.oiosaml.helper.DeveloperHelper;
-import dk.itst.oiosaml.logging.Audit;
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
-import dk.itst.oiosaml.logging.Operation;
-import dk.itst.oiosaml.security.CredentialRepository;
-import dk.itst.oiosaml.sp.metadata.IdpMetadata.Metadata;
-import dk.itst.oiosaml.sp.service.util.Constants;
-import org.apache.commons.configuration.Configuration;
-import org.bouncycastle.asn1.ASN1InputStream;
-import org.bouncycastle.asn1.ASN1OctetString;
-import org.bouncycastle.asn1.ASN1Primitive;
-import org.bouncycastle.asn1.DERIA5String;
-import org.bouncycastle.asn1.x509.AccessDescription;
-import org.bouncycastle.asn1.x509.AuthorityInformationAccess;
-import org.bouncycastle.asn1.x509.CRLDistPoint;
-import org.bouncycastle.asn1.x509.DistributionPoint;
-import org.bouncycastle.asn1.x509.GeneralName;
-import org.bouncycastle.asn1.x509.GeneralNames;
-import org.bouncycastle.asn1.x509.X509Extension;
-import org.bouncycastle.i18n.filter.UntrustedUrlInput;
-import org.bouncycastle.x509.extension.X509ExtensionUtil;
-import org.fishwife.jrugged.CircuitBreaker;
-import org.fishwife.jrugged.CircuitBreakerConfig;
-import org.fishwife.jrugged.CircuitBreakerException;
-import org.fishwife.jrugged.CircuitBreakerFactory;
-import org.fishwife.jrugged.DefaultFailureInterpreter;
-import org.opensaml.xml.security.x509.X509Credential;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -83,6 +51,39 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.Callable;
+
+import org.apache.commons.configuration.Configuration;
+import org.bouncycastle.asn1.ASN1InputStream;
+import org.bouncycastle.asn1.ASN1OctetString;
+import org.bouncycastle.asn1.ASN1Primitive;
+import org.bouncycastle.asn1.DERIA5String;
+import org.bouncycastle.asn1.x509.AccessDescription;
+import org.bouncycastle.asn1.x509.AuthorityInformationAccess;
+import org.bouncycastle.asn1.x509.CRLDistPoint;
+import org.bouncycastle.asn1.x509.DistributionPoint;
+import org.bouncycastle.asn1.x509.GeneralName;
+import org.bouncycastle.asn1.x509.GeneralNames;
+import org.bouncycastle.asn1.x509.X509Extension;
+import org.bouncycastle.i18n.filter.UntrustedUrlInput;
+import org.bouncycastle.x509.extension.X509ExtensionUtil;
+import org.fishwife.jrugged.CircuitBreaker;
+import org.fishwife.jrugged.CircuitBreakerConfig;
+import org.fishwife.jrugged.CircuitBreakerException;
+import org.fishwife.jrugged.CircuitBreakerFactory;
+import org.fishwife.jrugged.DefaultFailureInterpreter;
+import org.opensaml.xml.security.x509.X509Credential;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
+import dk.itst.oiosaml.error.Layer;
+import dk.itst.oiosaml.error.WrappedException;
+import dk.itst.oiosaml.helper.DeveloperHelper;
+import dk.itst.oiosaml.logging.Audit;
+import dk.itst.oiosaml.logging.Operation;
+import dk.itst.oiosaml.security.CredentialRepository;
+import dk.itst.oiosaml.sp.metadata.IdpMetadata.Metadata;
+import dk.itst.oiosaml.sp.service.util.Constants;
 
 /**
  * Revocation of certificates are done using the follow methods.

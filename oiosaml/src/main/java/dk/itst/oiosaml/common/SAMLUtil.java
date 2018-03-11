@@ -23,8 +23,22 @@
  */
 package dk.itst.oiosaml.common;
 
-import dk.itst.oiosaml.error.Layer;
-import dk.itst.oiosaml.error.WrappedException;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.security.InvalidParameterException;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import javax.xml.namespace.QName;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.joda.time.DateTime;
 import org.opensaml.Configuration;
 import org.opensaml.DefaultBootstrap;
@@ -75,22 +89,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
-import javax.xml.namespace.QName;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Field;
-import java.security.InvalidParameterException;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import dk.itst.oiosaml.error.Layer;
+import dk.itst.oiosaml.error.WrappedException;
 
-;
+
 
 /**
  * Class with utility methods for creating SAML objects.

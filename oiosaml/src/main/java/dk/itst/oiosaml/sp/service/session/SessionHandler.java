@@ -29,6 +29,7 @@ import org.opensaml.saml2.core.Assertion;
 
 import dk.itst.oiosaml.sp.model.OIOAssertion;
 
+
 /**
  * Handle session state across requests and instances.
  * 

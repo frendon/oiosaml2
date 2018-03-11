@@ -1,7 +1,8 @@
 package dk.itst.oiosaml.sp.service.util;
 
-import javax.net.ssl.X509TrustManager;
 import java.security.cert.X509Certificate;
+
+import javax.net.ssl.X509TrustManager;
 
 public class DummyTrustManager implements X509TrustManager {
 

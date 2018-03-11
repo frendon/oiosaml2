@@ -27,13 +27,11 @@ import java.security.PublicKey;
 
 import javax.xml.crypto.dsig.XMLSignature;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.opensaml.Configuration;
 import org.opensaml.common.SignableSAMLObject;
+import org.opensaml.security.SAMLSignatureProfileValidator;
 import org.opensaml.ws.soap.soap11.Body;
 import org.opensaml.ws.soap.soap11.Envelope;
-import org.opensaml.security.SAMLSignatureProfileValidator;
 import org.opensaml.xml.ElementExtensibleXMLObject;
 import org.opensaml.xml.Namespace;
 import org.opensaml.xml.XMLObject;
@@ -50,11 +48,15 @@ import org.opensaml.xml.signature.Signer;
 import org.opensaml.xml.util.Base64;
 import org.opensaml.xml.util.XMLHelper;
 import org.opensaml.xml.validation.ValidationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Element;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.error.Layer;
 import dk.itst.oiosaml.error.WrappedException;
+
+
 
 /**
  * Base class for all SAML objects.

@@ -28,8 +28,6 @@ import java.security.cert.Certificate;
 import java.util.Collection;
 import java.util.Collections;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.joda.time.DateTime;
 import org.opensaml.common.SAMLVersion;
 import org.opensaml.saml2.core.Attribute;
@@ -38,6 +36,8 @@ import org.opensaml.saml2.core.Response;
 import org.opensaml.saml2.core.Subject;
 import org.opensaml.xml.XMLObject;
 import org.opensaml.xml.security.credential.Credential;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.logging.Audit;
@@ -46,6 +46,7 @@ import dk.itst.oiosaml.sp.NameIDFormat;
 import dk.itst.oiosaml.sp.model.validation.ValidationException;
 import dk.itst.oiosaml.sp.service.util.SOAPClient;
 import dk.itst.oiosaml.sp.service.util.Utils;
+
 
 public class OIOAttributeQuery extends OIORequest {
 	private static final Logger log = LoggerFactory.getLogger(OIOAttributeQuery.class);

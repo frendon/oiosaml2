@@ -32,6 +32,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.configuration.Configuration;
 
+
 public interface DevelMode {
 
 	public void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain fc, Configuration conf) throws IOException, ServletException;

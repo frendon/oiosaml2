@@ -32,6 +32,7 @@ import dk.itst.oiosaml.sp.OIOPrincipal;
 import dk.itst.oiosaml.sp.UserAssertion;
 import dk.itst.oiosaml.sp.service.util.Constants;
 
+
 public class SAMLHttpServletRequest extends HttpServletRequestWrapper {
 
 	private final UserAssertion assertion;

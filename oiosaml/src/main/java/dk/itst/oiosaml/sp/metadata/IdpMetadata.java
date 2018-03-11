@@ -25,14 +25,17 @@
  */
 package dk.itst.oiosaml.sp.metadata;
 
-import dk.itst.oiosaml.configuration.SAMLConfiguration;
-import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
-import dk.itst.oiosaml.error.Layer;
-import dk.itst.oiosaml.error.WrappedException;
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
-import dk.itst.oiosaml.security.SecurityHelper;
-import dk.itst.oiosaml.sp.service.util.Constants;
+import java.security.PublicKey;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.opensaml.common.xml.SAMLConstants;
 import org.opensaml.saml2.core.Attribute;
 import org.opensaml.saml2.metadata.ArtifactResolutionService;
@@ -47,17 +50,15 @@ import org.opensaml.saml2.metadata.SingleSignOnService;
 import org.opensaml.xml.XMLObject;
 import org.opensaml.xml.security.credential.UsageType;
 import org.opensaml.xml.signature.X509Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.security.PublicKey;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import dk.itst.oiosaml.configuration.SAMLConfiguration;
+import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
+import dk.itst.oiosaml.error.Layer;
+import dk.itst.oiosaml.error.WrappedException;
+import dk.itst.oiosaml.security.SecurityHelper;
+import dk.itst.oiosaml.sp.service.util.Constants;
 
 /**
  * Utility class to extract relevant values of the meta data related to the Login Site.
@@ -263,10 +264,24 @@ public class IdpMetadata {
 		private org.opensaml.xml.signature.X509Certificate getCertificateNode() {
 			if (idpSSODescriptor != null && idpSSODescriptor.getKeyDescriptors().size() > 0) {
 				KeyDescriptor keyDescriptor = null;
+				KeyDescriptor keyDescriptorUnspecified = null;
+				
 				for(KeyDescriptor kd  : idpSSODescriptor.getKeyDescriptors()){
 					if(kd.getUse().equals(UsageType.SIGNING)){
 						keyDescriptor=kd;
 					}
+					else if (kd.getUse().equals(UsageType.UNSPECIFIED)) {
+						keyDescriptorUnspecified = kd;
+					}
+				}
+				
+				// fallback to any unspecified keyDescriptor
+				if (keyDescriptor == null) {
+					keyDescriptor = keyDescriptorUnspecified;
+				}
+				
+				if (keyDescriptor == null) {
+					throw new IllegalStateException("IdP Metadata does not contain a KeyDescriptor for signing: " + getEntityID());
 				}
 
 				if (keyDescriptor.getKeyInfo().getX509Datas().size() > 0) {

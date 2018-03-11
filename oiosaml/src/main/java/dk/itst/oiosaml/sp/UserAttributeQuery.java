@@ -50,6 +50,7 @@ import dk.itst.oiosaml.sp.service.util.HttpSOAPClient;
 import dk.itst.oiosaml.sp.service.util.SOAPClient;
 import dk.itst.oiosaml.sp.util.AttributeUtil;
 
+
 public class UserAttributeQuery {
 	private static final CredentialRepository credentialRepository = new CredentialRepository();
 	private final String username;

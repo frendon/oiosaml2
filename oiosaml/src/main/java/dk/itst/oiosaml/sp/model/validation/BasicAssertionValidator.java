@@ -28,6 +28,7 @@ import org.opensaml.saml2.core.Assertion;
 
 import dk.itst.oiosaml.sp.model.OIOAssertion;
 
+
 public class BasicAssertionValidator implements AssertionValidator {
 
 	public void validate(OIOAssertion assertion, String spEntityId, String spAssertionConsumerURL) throws ValidationException {

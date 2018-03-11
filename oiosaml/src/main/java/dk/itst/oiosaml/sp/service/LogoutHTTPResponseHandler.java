@@ -29,13 +29,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import dk.itst.oiosaml.logging.Audit;
-import org.slf4j.Logger;;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import dk.itst.oiosaml.logging.Audit;
 import dk.itst.oiosaml.logging.Operation;
 import dk.itst.oiosaml.sp.metadata.IdpMetadata.Metadata;
 import dk.itst.oiosaml.sp.model.OIOLogoutResponse;
 import dk.itst.oiosaml.sp.service.util.Constants;
+
 
 /**
  * Servlet used to end a SLO - i.e. receiving the &lt;LogoutResponse&gt; from the

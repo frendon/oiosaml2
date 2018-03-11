@@ -61,6 +61,7 @@ import dk.itst.oiosaml.sp.service.util.Constants;
 import dk.itst.oiosaml.sp.service.util.SOAPClient;
 import dk.itst.oiosaml.sp.util.AttributeUtil;
 
+
 public class UserAttributeQueryTest extends AbstractServiceTests {
 	private HashMap<String, String> props;
 

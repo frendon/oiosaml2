@@ -40,17 +40,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.configuration.Configuration;
-import org.opensaml.DefaultBootstrap;
-import org.opensaml.xml.ConfigurationException;
 import org.opensaml.xml.security.BasicSecurityConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.configuration.SAMLConfiguration;
 import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
-import dk.itst.oiosaml.error.Layer;
-import dk.itst.oiosaml.error.WrappedException;
 import dk.itst.oiosaml.logging.Audit;
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import dk.itst.oiosaml.logging.Operation;
 import dk.itst.oiosaml.sp.UserAssertion;
 import dk.itst.oiosaml.sp.UserAssertionHolder;
@@ -65,7 +61,6 @@ import dk.itst.oiosaml.sp.service.session.SessionCleaner;
 import dk.itst.oiosaml.sp.service.session.SessionHandler;
 import dk.itst.oiosaml.sp.service.session.SessionHandlerFactory;
 import dk.itst.oiosaml.sp.service.util.Constants;
-
 
 /**
  * Servlet filter for checking if the user is authenticated.
@@ -109,15 +104,14 @@ public class SPFilter implements Filter {
 	private SessionHandlerFactory sessionHandlerFactory;
 	private AtomicBoolean cleanerRunning = new AtomicBoolean(false);
 	private DevelMode develMode;
+
 	/**
 	 * Static initializer for bootstrapping OpenSAML.
+	 * 
+	 * ... we need this in both SPFilter and DispatcherServlet as the order of creation of these two depends on the servlet container
 	 */
 	static {
-		try {
-			DefaultBootstrap.bootstrap();
-		} catch (ConfigurationException e) {
-			throw new WrappedException(Layer.DATAACCESS, e);
-		}
+		OIOSAMLBootstrap.init();
 	}
 
 	public void destroy() {

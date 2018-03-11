@@ -1,6 +1,17 @@
 package dk.itst.oiosaml.sp.util;
 
-import java.io.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.security.InvalidParameterException;
@@ -34,14 +45,11 @@ import org.opensaml.xml.schema.impl.XSAnyBuilder;
 import org.opensaml.xml.signature.KeyInfo;
 import org.opensaml.xml.signature.PGPData;
 import org.opensaml.xml.signature.Signature;
-
-import dk.itst.oiosaml.common.OIOSAMLConstants;
-import dk.itst.oiosaml.common.SAMLUtil;
 import org.opensaml.xml.util.XMLHelper;
 import org.w3c.dom.Element;
 
-import static org.junit.Assert.*;
-import static org.junit.Assert.assertFalse;
+import dk.itst.oiosaml.common.OIOSAMLConstants;
+import dk.itst.oiosaml.common.SAMLUtil;
 
 public class SAMLUtilTest {
 

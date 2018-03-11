@@ -35,6 +35,7 @@ import dk.itst.oiosaml.sp.metadata.IdpMetadata;
 import dk.itst.oiosaml.sp.metadata.SPMetadata;
 import dk.itst.oiosaml.sp.service.session.SessionHandler;
 
+
 public class RequestContext {
 	private final HttpServletRequest request;
 	private final HttpServletResponse response;

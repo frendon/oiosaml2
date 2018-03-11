@@ -27,6 +27,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 
+
 public class MetadataHandler implements SAMLHandler {
 
 	public void handleGet(RequestContext context) throws ServletException, IOException {

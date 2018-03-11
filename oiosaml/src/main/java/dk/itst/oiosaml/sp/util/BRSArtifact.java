@@ -40,6 +40,7 @@ import dk.itst.oiosaml.common.OIOSAMLConstants;
 import dk.itst.oiosaml.error.Layer;
 import dk.itst.oiosaml.error.WrappedException;
 
+
 /**
  * Utility methods related to extract the content of a SAML Artifact
  * @author lsteinth

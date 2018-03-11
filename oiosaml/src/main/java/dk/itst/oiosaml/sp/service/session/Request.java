@@ -23,13 +23,14 @@
  */
 package dk.itst.oiosaml.sp.service.session;
 
-import dk.itst.oiosaml.sp.service.util.Constants;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+
+import dk.itst.oiosaml.sp.service.util.Constants;
+
 
 public class Request implements Serializable {
 	private static final long serialVersionUID = 8582710873277995206L;

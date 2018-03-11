@@ -23,14 +23,6 @@
  */
 package dk.itst.oiosaml.sp;
 
-import dk.itst.oiosaml.common.OIOSAMLConstants;
-import dk.itst.oiosaml.security.SecurityHelper;
-import dk.itst.oiosaml.sp.model.OIOAssertion;
-import dk.itst.oiosaml.sp.util.AttributeUtil;
-import org.joda.time.DateTime;
-import org.opensaml.saml2.core.Attribute;
-import org.opensaml.saml2.core.AttributeStatement;
-
 import java.io.Serializable;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -40,6 +32,15 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.joda.time.DateTime;
+import org.opensaml.saml2.core.Attribute;
+import org.opensaml.saml2.core.AttributeStatement;
+
+import dk.itst.oiosaml.common.OIOSAMLConstants;
+import dk.itst.oiosaml.security.SecurityHelper;
+import dk.itst.oiosaml.sp.model.OIOAssertion;
+import dk.itst.oiosaml.sp.util.AttributeUtil;
 
 public class UserAssertionImpl implements UserAssertion, Serializable {
 	private static final long serialVersionUID = -1756335950388129831L;

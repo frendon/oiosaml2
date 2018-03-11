@@ -35,13 +35,15 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.sp.service.RequestContext;
 import dk.itst.oiosaml.sp.service.session.Request;
+
+
 
 /**
  * Utility class for handling HTTP requests and responses.

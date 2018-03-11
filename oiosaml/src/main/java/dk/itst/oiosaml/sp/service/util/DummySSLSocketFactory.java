@@ -9,6 +9,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 
+
 public class DummySSLSocketFactory extends SSLSocketFactory {
 	private SSLSocketFactory factory;
 

@@ -27,8 +27,6 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.slf4j.Logger;;
-import org.slf4j.LoggerFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.opensaml.common.binding.BindingException;
@@ -40,6 +38,8 @@ import org.opensaml.saml2.core.StatusCode;
 import org.opensaml.ws.soap.soap11.Envelope;
 import org.opensaml.xml.util.XMLHelper;
 import org.opensaml.xml.validation.ValidationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import dk.itst.oiosaml.common.OIOSAMLConstants;
 import dk.itst.oiosaml.common.SAMLUtil;
@@ -50,6 +50,8 @@ import dk.itst.oiosaml.logging.Operation;
 import dk.itst.oiosaml.sp.metadata.IdpMetadata;
 import dk.itst.oiosaml.sp.model.OIOResponse;
 import dk.itst.oiosaml.sp.util.BRSArtifact;
+
+
 
 public class ArtifactExtractor  {
 	private static final Logger log = LoggerFactory.getLogger(ArtifactExtractor.class);

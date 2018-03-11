@@ -9,10 +9,10 @@ import org.opensaml.common.SAMLObject;
 import org.opensaml.xml.Namespace;
 import org.opensaml.xml.NamespaceManager;
 import org.opensaml.xml.XMLObject;
+import org.opensaml.xml.schema.XSBooleanValue;
 import org.opensaml.xml.util.IDIndex;
 import org.opensaml.xml.validation.ValidationException;
 import org.opensaml.xml.validation.Validator;
-import org.opensaml.xml.schema.XSBooleanValue;
 import org.w3c.dom.Element;
 
 public class AbstractStub implements SAMLObject {

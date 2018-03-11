@@ -31,6 +31,7 @@ import org.opensaml.xml.schema.impl.XSAnyBuilder;
 
 import dk.itst.oiosaml.common.OIOSAMLConstants;
 
+
 /**
  * Class containing the assurance level associated with the login.
  * The currently known assurance levels are:

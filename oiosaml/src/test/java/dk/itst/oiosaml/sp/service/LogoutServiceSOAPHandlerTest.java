@@ -26,7 +26,6 @@ import org.opensaml.ws.soap.soap11.Envelope;
 
 import dk.itst.oiosaml.common.SAMLUtil;
 import dk.itst.oiosaml.sp.model.OIOLogoutRequest;
-import dk.itst.oiosaml.sp.service.LogoutServiceSOAPHandler;
 
 public class LogoutServiceSOAPHandlerTest extends AbstractServiceTests {
 

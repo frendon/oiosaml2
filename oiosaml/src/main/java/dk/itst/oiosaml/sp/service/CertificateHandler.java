@@ -33,6 +33,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.opensaml.xml.security.x509.X509Credential;
 import org.opensaml.xml.util.Base64;
 
+
 public class CertificateHandler implements SAMLHandler {
 
 	public void handleGet(RequestContext context) throws ServletException, IOException {

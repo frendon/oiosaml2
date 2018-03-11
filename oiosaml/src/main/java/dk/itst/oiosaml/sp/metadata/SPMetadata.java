@@ -47,6 +47,7 @@ import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
 import dk.itst.oiosaml.sp.model.OIOSamlObject;
 import dk.itst.oiosaml.sp.service.util.Constants;
 
+
 /**
  * Utility class to extract relevant values of the meta data related to the
  * service provider.
