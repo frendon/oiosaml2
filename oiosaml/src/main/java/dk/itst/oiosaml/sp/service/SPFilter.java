@@ -44,6 +44,7 @@ import org.opensaml.xml.security.BasicSecurityConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import dk.itst.oiosaml.configuration.OIOSAMLBootstrap;
 import dk.itst.oiosaml.configuration.SAMLConfiguration;
 import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
 import dk.itst.oiosaml.logging.Audit;

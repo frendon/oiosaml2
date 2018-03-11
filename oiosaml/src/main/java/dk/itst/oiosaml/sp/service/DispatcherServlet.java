@@ -46,6 +46,7 @@ import org.opensaml.xml.security.credential.Credential;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import dk.itst.oiosaml.configuration.OIOSAMLBootstrap;
 import dk.itst.oiosaml.configuration.SAMLConfigurationFactory;
 import dk.itst.oiosaml.error.WrappedException;
 import dk.itst.oiosaml.logging.Audit;
